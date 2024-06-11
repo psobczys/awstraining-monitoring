@@ -1,7 +1,7 @@
 ################ ecs-task-role ################
 
 resource "aws_iam_role" "ecs_task_role" {
-  name = "backend-ecs-task-role-${var.region}"
+  name = "backend-ecs-task-role-${var.region}-v1"
   assume_role_policy = file("../../../policies/ecs-assume-role-policy.json")
 }
 
