@@ -1,5 +1,5 @@
 data "aws_iam_role" "loadtest_ecs_role" {
-  name = "backend-ecs-task-role-${var.region}"
+  name = "backend-ecs-task-role-${var.region}-v1"
 }
 
 data "aws_iam_role" "loadtest_ecs_execution_role" {

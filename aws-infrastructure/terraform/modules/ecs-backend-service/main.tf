@@ -11,7 +11,7 @@ resource "aws_secretsmanager_secret" "secrets_manager" {
 }
 
 resource "aws_iam_policy" "ecs_task_role_policy" {
-  name = "backend-ecs-task-role-policy-${var.region}"
+  name = "backend-ecs-task-role-policy-${var.region}-v1"
   policy = templatefile("../../../policies/ecs-task-role-policy.tpl", {
     secrets_manager_resources = [ aws_secretsmanager_secret.secrets_manager.arn ]
     region = var.region
